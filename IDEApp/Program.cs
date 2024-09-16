@@ -28,6 +28,31 @@ interface ILanguage
     string GetParadigm();
 }
 
+
+abstract class ObjecteOriented
+{
+    public string GetUnit()
+    {
+        return "Class";
+    }
+    public string GetParadigm()
+    {
+        return "Object Oriented";
+    }
+}
+
+abstract class ProceduralOriented
+{
+    public string GetUnit()
+    {
+        return "Function";
+    }
+    public string GetParadigm()
+    {
+        return "Procedural Oriented";
+    }
+}
+
 class IDE // OCP
 {
     // n languages only
@@ -63,7 +88,7 @@ class IDE // OCP
 
 
 }
-class LangCSharp : ILanguage
+class LangCSharp : ObjecteOriented, ILanguage
 {
 
     // How
@@ -71,57 +96,36 @@ class LangCSharp : ILanguage
     {
         return "C# Language";
     }
-    public string GetUnit()
-    {
-        return "Class";
-    }
-    public string GetParadigm()
-    {
-        return "Object Oriented";
-    }
+
 }
-class LangJava : ILanguage
+class LangJava : ObjecteOriented, ILanguage
 {
     public string GetName()
     {
         return "Java Language";
     }
-    public string GetUnit()
-    {
-        return "Class";
-    }
-    public string GetParadigm()
-    {
-        return "Object Oriented";
-    }
+
 }
-class LangC : ILanguage
+class LangC : ProceduralOriented, ILanguage
 {
     public string GetName()
     {
         return "C Language";
     }
-    public string GetUnit()
-    {
-        return "Function";
-    }
-    public string GetParadigm()
-    {
-        return "Procedural Oriented";
-    }
+
 }
-class LangTypescript : ILanguage
+class LangTypescript : ObjecteOriented, ILanguage
 {
     public string GetName()
     {
         return "Typescript Language";
     }
-    public string GetUnit()
+
+}
+
+namespace IDEApp
+{
+    public class LangVbNet : ObjecteOriented
     {
-        return "Class";
-    }
-    public string GetParadigm()
-    {
-        return "Object Oriented";
     }
 }
