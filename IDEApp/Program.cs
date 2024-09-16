@@ -3,35 +3,70 @@
     static void Main()
     {
         IDE ide = new IDE();
+        LangJava java = new LangJava();
+        //ide.languages.Add(java);
+
+        LangC langC = new LangC();
+        ide.languages.Add(langC);
+
+        LangCSharp langCSharp = new LangCSharp();
+        ide.languages.Add(langCSharp);
+
+        LangTypescript langTypescript = new LangTypescript();
+        ide.languages.Add(langTypescript);
+
         ide.Work();
     }
 }
 
 
+interface ILanguage
+{
+    // What?
+    string GetName();
+    string GetUnit();
+    string GetParadigm();
+}
+
 class IDE // OCP
 {
-    LangC c = new LangC();
-    LangCSharp cs = new LangCSharp();
-    LangJava java = new LangJava();
+    // n languages only
+    public List<ILanguage> languages = new List<ILanguage>();
+
+
+    // Program to contract/abstractions not to concreate classes
+    // loose coupled and high cohesion
+
+    //LangC c = new LangC();
+    //LangCSharp cs = new LangCSharp();
+    //LangJava java = new LangJava();
 
     public void Work() // DRY
     {
-        Console.WriteLine(c.GetName());
-        Console.WriteLine(c.GetUnit());
-        Console.WriteLine(c.GetParadigm());
-        Console.WriteLine("-----------------");
-        Console.WriteLine(cs.GetName());
-        Console.WriteLine(cs.GetUnit());
-        Console.WriteLine(cs.GetParadigm());
-        Console.WriteLine("-----------------");
-        Console.WriteLine(java.GetName());
-        Console.WriteLine(java.GetUnit());
-        Console.WriteLine(java.GetParadigm());
+        foreach (ILanguage language in languages)
+        {
+            Console.WriteLine(language.GetName());
+            Console.WriteLine(language.GetUnit());
+            Console.WriteLine(language.GetParadigm());
+            Console.WriteLine("-----------------");
+        }
+
+        //Console.WriteLine(cs.GetName());
+        //Console.WriteLine(cs.GetUnit());
+        //Console.WriteLine(cs.GetParadigm());
+        //Console.WriteLine("-----------------");
+        //Console.WriteLine(java.GetName());
+        //Console.WriteLine(java.GetUnit());
+        //Console.WriteLine(java.GetParadigm());
 
     }
+
+
 }
-class LangCSharp
+class LangCSharp : ILanguage
 {
+
+    // How
     public string GetName()
     {
         return "C# Language";
@@ -45,7 +80,7 @@ class LangCSharp
         return "Object Oriented";
     }
 }
-class LangJava
+class LangJava : ILanguage
 {
     public string GetName()
     {
@@ -60,7 +95,7 @@ class LangJava
         return "Object Oriented";
     }
 }
-class LangC
+class LangC : ILanguage
 {
     public string GetName()
     {
@@ -73,5 +108,20 @@ class LangC
     public string GetParadigm()
     {
         return "Procedural Oriented";
+    }
+}
+class LangTypescript : ILanguage
+{
+    public string GetName()
+    {
+        return "Typescript Language";
+    }
+    public string GetUnit()
+    {
+        return "Class";
+    }
+    public string GetParadigm()
+    {
+        return "Object Oriented";
     }
 }
