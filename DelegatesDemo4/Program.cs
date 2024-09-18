@@ -14,7 +14,7 @@
     }
 
 
-    class Account // SRP
+    class Account // SRP OCP
     {
         public int Balance { get; private set; }
 
