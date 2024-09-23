@@ -3,8 +3,24 @@ namespace Calculator.Business.TestProject
     [TestClass]
     public class SimpleCalculatorUnitTest
     {
+        SimpleCalculator target = null;
+
+
+        [TestInitialize]
+        public void Init()
+        {
+            target = new SimpleCalculator();
+        }
+
+
+        [TestCleanup]
+        public void CleanUp()
+        {
+            target = null;
+        }
+
         [TestMethod]
-        public void SumTest_WithValidInput_ShouldReturnsValidResult()  // Test Case
+        public void SumTest_WithValidInput_ShouldReturnsValidResult()  // Positive Test Case
         {
             // write only plain code
             // no conditional statements
@@ -14,21 +30,22 @@ namespace Calculator.Business.TestProject
 
             // AAA
             // A - Arrange
-            SimpleCalculator target = new SimpleCalculator();
-            int a = 10;
-            int b = 20;
-            int expected = 30;
+            //SimpleCalculator target = new SimpleCalculator();
+            //int a = 10;
+            //int b = 20;
+            //int expected = 30;
             // A - Act
-            int actual = target.FindSum(a, b);
+            int actual = target.FindSum(1, 1);
             // A - Assert
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(1 + 1, actual);
 
 
 
         }
 
         [TestMethod]
-        public void SumTest_WithZeroInput_ShouldReturnsZeroResult()  // Test Case
+        [ExpectedException(typeof(ZeroInputException))]
+        public void SumTest_WithZeroInput_ShouldThrowsExp()  // Negative Test Case
         {
             // write only plain code
             // no conditional statements
@@ -38,20 +55,21 @@ namespace Calculator.Business.TestProject
 
             // AAA
             // A - Arrange
-            SimpleCalculator target = new SimpleCalculator();
+            //SimpleCalculator target = new SimpleCalculator();
             int a = 0;
             int b = 0;
-            int expected = 0;
+            //int expected = 0;
             // A - Act
             int actual = target.FindSum(a, b);
             // A - Assert
-            Assert.AreEqual(expected, actual);
+            //Assert.AreEqual(expected, actual);
 
 
 
         }
 
         [TestMethod]
+        [Ignore]
         public void SumTest_WithNegativeInput_ShouldReturnsnegativeResult()  // Test Case
         {
             // write only plain code
@@ -62,7 +80,7 @@ namespace Calculator.Business.TestProject
 
             // AAA
             // A - Arrange
-            SimpleCalculator target = new SimpleCalculator();
+            //SimpleCalculator target = new SimpleCalculator();
             int a = -1;
             int b = -1;
             int expected = -2;
@@ -77,9 +95,9 @@ namespace Calculator.Business.TestProject
 
         [TestMethod]
         [DataRow(1, 1, 2)]
-        [DataRow(0, 0, 0)]
-        [DataRow(-1, -1, -2)]
-        [DataRow(0, 1, 1)]
+        //[DataRow(0, 0, 0)]
+        //[DataRow(-1, -1, -2)]
+        //[DataRow(0, 1, 1)]
         public void SumTest_WithAllTypeofInput_ShouldReturnsValidResult(int a, int b, int expected)  // Test Case
         {
             // write only plain code
@@ -90,7 +108,7 @@ namespace Calculator.Business.TestProject
 
             // AAA
             // A - Arrange
-            SimpleCalculator target = new SimpleCalculator();
+            //SimpleCalculator target = new SimpleCalculator();
             //int a = -1;
             //int b = -1;
             //int expected = -2;
@@ -101,6 +119,30 @@ namespace Calculator.Business.TestProject
 
 
 
+        }
+        [TestMethod]
+        //[Ignore]
+        [ExpectedException(typeof(NegativeInputException))]
+        public void SumTest_WithNegativeInput_ThrowsExp()
+        {
+            //SimpleCalculator target = new SimpleCalculator();
+            target.FindSum(-1, -1);
+        }
+
+
+
+        [TestMethod]
+        public void SubtractTest_WithValidInput_ShouldReturnValidResult()
+        {
+            int actual = target.Subtract(10, 10);
+            Assert.AreEqual(0, actual);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ZeroInputException))]
+        public void SubtractTest_WithZeroInput_ShouldThrowsExp()
+        {
+            int actual = target.Subtract(0, 0);
         }
     }
 }
