@@ -1,15 +1,30 @@
+using Moq;
 namespace Calculator.Business.TestProject
 {
+
+    //class MockCalculatorRepo : ICalculatorRepo
+    //{
+    //    public void Save(string s)
+    //    {
+    //        //
+    //    }
+    //}
+
+
     [TestClass]
+
     public class SimpleCalculatorUnitTest
     {
         SimpleCalculator target = null;
-
+        Mock<ICalculatorRepo> mock = null;
 
         [TestInitialize]
         public void Init()
         {
-            target = new SimpleCalculator();
+            mock = new Mock<ICalculatorRepo>();
+            mock.Setup(m => m.Save($"{1} + {1} = {1 + 1}"));
+            target = new SimpleCalculator(mock.Object);
+            //target = new SimpleCalculator(new CalculatorRepo());
         }
 
 
@@ -144,5 +159,13 @@ namespace Calculator.Business.TestProject
         {
             int actual = target.Subtract(0, 0);
         }
+        [TestMethod]
+        //[ExpectedException(typeof(ZeroInputException))]
+        public void SubtractTest_WithValidInput_ShouldCallSaveMethod()
+        {
+            int actual = target.Subtract(10, 10);
+            mock.Verify(m => m.Save($"{10} - {10} = {10 - 10}"), Times.AtLeastOnce);
+        }
+
     }
 }
