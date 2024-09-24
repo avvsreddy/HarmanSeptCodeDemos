@@ -5,13 +5,13 @@ VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDEApp", "IDEApp\IDEApp.csproj", "{5ECDAF7E-338B-4F29-8D3A-8DC2692A3464}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabsNRef", "LabsNRef\LabsNRef.csproj", "{9F14903B-9771-4E89-A1E9-81E6F1569AAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LabsNRef", "LabsNRef\LabsNRef.csproj", "{9F14903B-9771-4E89-A1E9-81E6F1569AAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompanyOrdersLab", "CompanyOrdersLab\CompanyOrdersLab.csproj", "{259778A5-4F39-420E-803B-3921B43B842F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompanyOrdersLab", "CompanyOrdersLab\CompanyOrdersLab.csproj", "{259778A5-4F39-420E-803B-3921B43B842F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionsDemo", "ExceptionsDemo\ExceptionsDemo.csproj", "{978D09AA-4886-44AA-997F-53E1D4E44D1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExceptionsDemo", "ExceptionsDemo\ExceptionsDemo.csproj", "{978D09AA-4886-44AA-997F-53E1D4E44D1D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorLibrary", "CalculatorLibrary\CalculatorLibrary.csproj", "{504DB446-83FD-4A78-8EB9-2DA905C71EC0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculatorLibrary", "CalculatorLibrary\CalculatorLibrary.csproj", "{504DB446-83FD-4A78-8EB9-2DA905C71EC0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Calculator Application", "Calculator Application", "{F45613FF-C1C6-434A-A4A0-4EB0E399C940}"
 EndProject
@@ -19,7 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{AA
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BackEnd", "BackEnd", "{C55C45DD-5D45-495C-97BE-2E488DE6CBDE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorClient", "CalculatorClient\CalculatorClient.csproj", "{33DD57A3-552F-4E5D-95EE-41D36139239D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculatorClient", "CalculatorClient\CalculatorClient.csproj", "{33DD57A3-552F-4E5D-95EE-41D36139239D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegatesDemo", "DelegatesDemo\DelegatesDemo.csproj", "{04391053-4C71-40D6-8DC0-5847098648DB}"
 EndProject
@@ -33,27 +33,41 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegatesDemo4", "Delegates
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LINQ", "LINQ", "{3A832218-50DC-4689-BDDA-1F7FE63170E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LanguageEnhancements", "LanguageEnhancements\LanguageEnhancements.csproj", "{49E5E83F-FD9C-46C6-B090-CB5A57F41BA4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LanguageEnhancements", "LanguageEnhancements\LanguageEnhancements.csproj", "{49E5E83F-FD9C-46C6-B090-CB5A57F41BA4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqDemo1", "LinqDemo1\LinqDemo1.csproj", "{4A5CD7AE-D347-4A98-B674-CBE4EC7A3D4B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqDemo1", "LinqDemo1\LinqDemo1.csproj", "{4A5CD7AE-D347-4A98-B674-CBE4EC7A3D4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqDemo3", "LinqDemo3\LinqDemo3.csproj", "{2AB8AAEB-BECB-4CC5-8350-A99255D25F89}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqDemo3", "LinqDemo3\LinqDemo3.csproj", "{2AB8AAEB-BECB-4CC5-8350-A99255D25F89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqDemo5", "LinqDemo5\LinqDemo5.csproj", "{0EB6C609-F652-4AFE-AD4D-81E82EF537C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqDemo5", "LinqDemo5\LinqDemo5.csproj", "{0EB6C609-F652-4AFE-AD4D-81E82EF537C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqToXml", "LinqToXml\LinqToXml.csproj", "{83E86FC0-FFE9-4FB7-BA30-B0F557E34E26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqToXml", "LinqToXml\LinqToXml.csproj", "{83E86FC0-FFE9-4FB7-BA30-B0F557E34E26}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqToObjects", "LinqToObjects\LinqToObjects.csproj", "{13E5E0B9-F0C2-4924-B382-D336BFF259DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqToObjects", "LinqToObjects\LinqToObjects.csproj", "{13E5E0B9-F0C2-4924-B382-D336BFF259DA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Design Patterns", "Design Patterns", "{E85CD6CA-2068-4DB7-A17D-82FC54287E26}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POSApp", "POSApp\POSApp.csproj", "{D0EBEA04-F5D3-40F0-B69C-7A1E7D22574A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "POSApp", "POSApp\POSApp.csproj", "{D0EBEA04-F5D3-40F0-B69C-7A1E7D22574A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit Testing", "Unit Testing", "{20865C94-A36F-4AE0-8B02-ADB0B19AB16E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.Business", "Calculator.Business\Calculator.Business.csproj", "{BE5C211D-1DC2-4E20-98D8-66A05CCB60C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculator.Business", "Calculator.Business\Calculator.Business.csproj", "{BE5C211D-1DC2-4E20-98D8-66A05CCB60C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.Business.TestProject", "Calculator.Business.TestProject\Calculator.Business.TestProject.csproj", "{EEA14D43-306F-4461-820D-ECC1DB061C99}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculator.Business.TestProject", "Calculator.Business.TestProject\Calculator.Business.TestProject.csproj", "{EEA14D43-306F-4461-820D-ECC1DB061C99}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Knowledge Hub Portal - Backend", "Knowledge Hub Portal - Backend", "{A07635BE-3F52-4456-9445-E1103EA2346B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API Layer", "API Layer", "{9294389A-1FBD-4D8B-A00A-63E40F441A3A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain Layer", "Domain Layer", "{8FE50D0F-DD35-46E4-B594-9EDA8935D294}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data Layer", "Data Layer", "{FE6D8923-DA8B-47A9-AEE8-0F7984EB953A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KnowledgeHubPortal.Domain", "KnowledgeHubPortal.Domain\KnowledgeHubPortal.Domain.csproj", "{66F62579-CD5A-4DF7-AFC4-431D36F52414}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KnowledgeHubPortal.Data", "KnowledgeHubPortal.Data\KnowledgeHubPortal.Data.csproj", "{4E739599-EDF7-4EBD-8AD6-AF3A3DFFF526}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KnowledgeHubPortal.API", "KnowledgeHubPortal.API\KnowledgeHubPortal.API.csproj", "{03FC1595-85A6-4414-B5F9-846438D17FAC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -137,6 +151,18 @@ Global
 		{EEA14D43-306F-4461-820D-ECC1DB061C99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EEA14D43-306F-4461-820D-ECC1DB061C99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EEA14D43-306F-4461-820D-ECC1DB061C99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66F62579-CD5A-4DF7-AFC4-431D36F52414}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66F62579-CD5A-4DF7-AFC4-431D36F52414}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66F62579-CD5A-4DF7-AFC4-431D36F52414}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66F62579-CD5A-4DF7-AFC4-431D36F52414}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E739599-EDF7-4EBD-8AD6-AF3A3DFFF526}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E739599-EDF7-4EBD-8AD6-AF3A3DFFF526}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E739599-EDF7-4EBD-8AD6-AF3A3DFFF526}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E739599-EDF7-4EBD-8AD6-AF3A3DFFF526}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03FC1595-85A6-4414-B5F9-846438D17FAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03FC1595-85A6-4414-B5F9-846438D17FAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03FC1595-85A6-4414-B5F9-846438D17FAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03FC1595-85A6-4414-B5F9-846438D17FAC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -160,6 +186,12 @@ Global
 		{D0EBEA04-F5D3-40F0-B69C-7A1E7D22574A} = {E85CD6CA-2068-4DB7-A17D-82FC54287E26}
 		{BE5C211D-1DC2-4E20-98D8-66A05CCB60C6} = {20865C94-A36F-4AE0-8B02-ADB0B19AB16E}
 		{EEA14D43-306F-4461-820D-ECC1DB061C99} = {20865C94-A36F-4AE0-8B02-ADB0B19AB16E}
+		{9294389A-1FBD-4D8B-A00A-63E40F441A3A} = {A07635BE-3F52-4456-9445-E1103EA2346B}
+		{8FE50D0F-DD35-46E4-B594-9EDA8935D294} = {A07635BE-3F52-4456-9445-E1103EA2346B}
+		{FE6D8923-DA8B-47A9-AEE8-0F7984EB953A} = {A07635BE-3F52-4456-9445-E1103EA2346B}
+		{66F62579-CD5A-4DF7-AFC4-431D36F52414} = {8FE50D0F-DD35-46E4-B594-9EDA8935D294}
+		{4E739599-EDF7-4EBD-8AD6-AF3A3DFFF526} = {FE6D8923-DA8B-47A9-AEE8-0F7984EB953A}
+		{03FC1595-85A6-4414-B5F9-846438D17FAC} = {9294389A-1FBD-4D8B-A00A-63E40F441A3A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A6AB0D62-69E3-4BC1-B0E7-C473401811C2}
