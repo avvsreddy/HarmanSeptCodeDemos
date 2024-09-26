@@ -18,5 +18,17 @@ namespace ProductsManagementApp.Entities
         public string Brand { get; set; }
         [NotMapped]
         public int ProfitMargin { get; set; }
+        public virtual Category Category { get; set; }
+    }
+
+    public class Category
+    {
+        public int CategoryID { get; set; }
+        [Required]
+        [MaxLength(100)]
+        [MinLength(3)]
+        public string Name { get; set; }
+        [MaxLength(500)]
+        public string? Description { get; set; }
     }
 }

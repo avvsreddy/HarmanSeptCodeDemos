@@ -15,16 +15,17 @@ namespace ProductsManagementApp.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string connStr1 = "Data Source=(localdb)\\mssqllocaldb;Initial Catalog=HarmanProductsDb2024;Integrated Security=True";
-            string connStr2 = "Server=(localdb)\\mssqllocaldb;Database=HarmanProductsDb2024;Integrated Security=true";
+            string connStr1 = "Data Source=(localdb)\\mssqllocaldb;Initial Catalog=HarmanProductsDb2024;Integrated Security=True;MultipleActiveResultSets=True";
+            string connStr2 = "Server=(localdb)\\mssqllocaldb;Database=HarmanProductsDb2024;Integrated Security=true;MultipleActiveResultSets=True";
             optionsBuilder.UseSqlServer(connStr1)
-                .LogTo(Console.WriteLine, LogLevel.Information);
+                .LogTo(Console.WriteLine, LogLevel.Information).UseLazyLoadingProxies();
 
         }
 
 
         // configure and map entity classess with tables
         public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
     }
 }

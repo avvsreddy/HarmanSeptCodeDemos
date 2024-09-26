@@ -7,7 +7,39 @@ namespace ProductsManagementApp
     {
         static void Main(string[] args)
         {
-            Select();
+
+            // Get all products and display Product Name and Category Name
+            var db = new ProductsDbContext();
+            var products = from p in db.Products select p;
+
+            foreach (var item in products)
+            {
+                Console.WriteLine(item.Name + "\t" + item.Category.Name);
+            }
+
+            // Eagar Loading
+            // Lazy Loading
+        }
+
+        private static void NewProdWithOldCat()
+        {
+            var db = new ProductsDbContext();
+            // new product with existing category
+            var c = db.Categories.Find(1);
+            var p = new Product { Name = "IPhone 16 Pro", Price = 99999, Brand = "Apple", Category = c };
+            db.Products.Add(p);
+            db.SaveChanges();
+        }
+
+        private static void NewCatNewProd()
+        {
+            // Add new product with new category
+            var db = new ProductsDbContext();
+            var c = new Category { Name = "Mobiles", Description = "Mobile Phones" };
+            var p = new Product { Name = "IPhone 16", Price = 89999, Brand = "Apple", Category = c };
+            db.Products.Add(p);
+            db.Categories.Add(c);
+            db.SaveChanges();
         }
 
         private static void Delete()
