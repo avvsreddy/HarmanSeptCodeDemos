@@ -3,17 +3,63 @@
   <Class Name="ProductsManagementApp.Entities.Product">
     <Position X="1" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>EAAAAAAAAQAAAAAAAAAAAgQAAAAAAAAAAAAAAAABCAA=</HashCode>
+      <HashCode>EAAAAAAAAQAAAIAAAAAAAgQAAAAAAAAAAAAAAAABCAA=</HashCode>
       <FileName>Entities\Product.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Category" />
     </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Suppliers" />
+    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="ProductsManagementApp.Entities.Category">
     <Position X="4" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAACAAAgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAACAAAgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Entities\Product.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Products" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ProductsManagementApp.Entities.Supplier">
+    <Position X="1" Y="3.5" Width="1.5" />
+    <InheritanceLine Type="ProductsManagementApp.Entities.Person" FixedToPoint="true">
+      <Path>
+        <Point X="4" Y="4" />
+        <Point X="2.5" Y="4" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAQQ=</HashCode>
+      <FileName>Entities\Product.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Products" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ProductsManagementApp.Entities.Person">
+    <Position X="4" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAACAAAAAAAAAAAAQAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Product.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProductsManagementApp.Entities.Customer">
+    <Position X="6.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAgAAAAAAAAA=</HashCode>
+      <FileName>Entities\Product.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Address" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ProductsManagementApp.Entities.Address">
+    <Position X="9.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABIAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
       <FileName>Entities\Product.cs</FileName>
     </TypeIdentifier>
   </Class>

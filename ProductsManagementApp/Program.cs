@@ -8,6 +8,26 @@ namespace ProductsManagementApp
         static void Main(string[] args)
         {
 
+            // add new customer
+            var db = new ProductsDbContext();
+            var c = new Customer { Name = "Customer 1", Discount = 10, Email = "customer1@mail.com", Mobile = "23423423" };
+            db.Customers.Add(c);
+
+            var s = new Supplier { Name = "Supplier 1", Email = "supplier1@mail.com", Mobile = "456456", GST = "DFSD5345", Rating = 4 };
+            db.Suppliers.Add(s);
+            db.SaveChanges();
+
+
+            // get all customers
+            //var customers = db.Customers;
+            //foreach (var customer in customers)
+            //{
+            //}
+
+        }
+
+        private static void NewMethod()
+        {
             // Get all products and display Product Name and Category Name
             var db = new ProductsDbContext();
             var products = from p in db.Products select p;

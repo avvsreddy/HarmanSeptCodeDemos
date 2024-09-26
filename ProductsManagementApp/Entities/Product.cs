@@ -19,6 +19,7 @@ namespace ProductsManagementApp.Entities
         [NotMapped]
         public int ProfitMargin { get; set; }
         public virtual Category Category { get; set; }
+        public virtual List<Supplier> Suppliers { get; set; }
     }
 
     public class Category
@@ -30,5 +31,37 @@ namespace ProductsManagementApp.Entities
         public string Name { get; set; }
         [MaxLength(500)]
         public string? Description { get; set; }
+
+        public virtual List<Product> Products { get; set; }
+    }
+
+    public class Supplier : Person
+    {
+        public string GST { get; set; }
+        public int Rating { get; set; }
+        public virtual List<Product> Products { get; set; }
+    }
+
+    abstract public class Person
+    {
+        public int PersonID { get; set; }
+        public string Name { get; set; }
+        public string Mobile { get; set; }
+        public string Email { get; set; }
+    }
+
+    public class Customer : Person
+    {
+        public double Discount { get; set; }
+        public Address Address { get; set; }
+    }
+
+    [ComplexType]
+
+    public class Address
+    {
+        public string Area { get; set; }
+        public string City { get; set; }
+        public string Pincode { get; set; }
     }
 }
