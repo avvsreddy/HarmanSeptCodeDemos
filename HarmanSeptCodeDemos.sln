@@ -63,17 +63,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain Layer", "Domain Laye
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data Layer", "Data Layer", "{FE6D8923-DA8B-47A9-AEE8-0F7984EB953A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KnowledgeHubPortal.Domain", "KnowledgeHubPortal.Domain\KnowledgeHubPortal.Domain.csproj", "{66F62579-CD5A-4DF7-AFC4-431D36F52414}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KnowledgeHubPortal.Domain", "KnowledgeHubPortal.Domain\KnowledgeHubPortal.Domain.csproj", "{66F62579-CD5A-4DF7-AFC4-431D36F52414}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KnowledgeHubPortal.Data", "KnowledgeHubPortal.Data\KnowledgeHubPortal.Data.csproj", "{4E739599-EDF7-4EBD-8AD6-AF3A3DFFF526}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KnowledgeHubPortal.Data", "KnowledgeHubPortal.Data\KnowledgeHubPortal.Data.csproj", "{4E739599-EDF7-4EBD-8AD6-AF3A3DFFF526}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KnowledgeHubPortal.API", "KnowledgeHubPortal.API\KnowledgeHubPortal.API.csproj", "{03FC1595-85A6-4414-B5F9-846438D17FAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KnowledgeHubPortal.API", "KnowledgeHubPortal.API\KnowledgeHubPortal.API.csproj", "{03FC1595-85A6-4414-B5F9-846438D17FAC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EF Demos", "EF Demos", "{B6848B54-3721-4FD7-B2D1-4F2499148E49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductsManagementApp", "ProductsManagementApp\ProductsManagementApp.csproj", "{E4A41AB9-969A-43E1-95F0-E4239BBDFAAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductsManagementApp", "ProductsManagementApp\ProductsManagementApp.csproj", "{E4A41AB9-969A-43E1-95F0-E4239BBDFAAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactManagementApp", "ContactManagementApp\ContactManagementApp.csproj", "{2A1E6D12-8FB9-4F02-9CFF-A1A7DFE55CA4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContactManagementApp", "ContactManagementApp\ContactManagementApp.csproj", "{2A1E6D12-8FB9-4F02-9CFF-A1A7DFE55CA4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebAPI Demos", "WebAPI Demos", "{D27B3DA4-DE44-4BA5-873F-B66956C7914A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoolProductsAPIService", "CoolProductsAPIService\CoolProductsAPIService.csproj", "{80399CF0-C5C8-4004-9A99-95FC50A191B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoolProductsClient", "CoolProductsClient\CoolProductsClient.csproj", "{A979878A-2A0B-43F0-A366-4A2584D8A6CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -177,6 +183,14 @@ Global
 		{2A1E6D12-8FB9-4F02-9CFF-A1A7DFE55CA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A1E6D12-8FB9-4F02-9CFF-A1A7DFE55CA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A1E6D12-8FB9-4F02-9CFF-A1A7DFE55CA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80399CF0-C5C8-4004-9A99-95FC50A191B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80399CF0-C5C8-4004-9A99-95FC50A191B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80399CF0-C5C8-4004-9A99-95FC50A191B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80399CF0-C5C8-4004-9A99-95FC50A191B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A979878A-2A0B-43F0-A366-4A2584D8A6CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A979878A-2A0B-43F0-A366-4A2584D8A6CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A979878A-2A0B-43F0-A366-4A2584D8A6CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A979878A-2A0B-43F0-A366-4A2584D8A6CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -208,6 +222,8 @@ Global
 		{03FC1595-85A6-4414-B5F9-846438D17FAC} = {9294389A-1FBD-4D8B-A00A-63E40F441A3A}
 		{E4A41AB9-969A-43E1-95F0-E4239BBDFAAA} = {B6848B54-3721-4FD7-B2D1-4F2499148E49}
 		{2A1E6D12-8FB9-4F02-9CFF-A1A7DFE55CA4} = {B6848B54-3721-4FD7-B2D1-4F2499148E49}
+		{80399CF0-C5C8-4004-9A99-95FC50A191B8} = {D27B3DA4-DE44-4BA5-873F-B66956C7914A}
+		{A979878A-2A0B-43F0-A366-4A2584D8A6CF} = {D27B3DA4-DE44-4BA5-873F-B66956C7914A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A6AB0D62-69E3-4BC1-B0E7-C473401811C2}
