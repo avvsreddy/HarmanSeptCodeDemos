@@ -1,6 +1,7 @@
 ﻿using CoolProductsAPIService.Model.Data;
 using CoolProductsAPIService.Model.Entities;
 using Microsoft.AspNet.OData;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -8,6 +9,7 @@ namespace CoolProductsAPIService.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class ProductsController : ControllerBase
     {
 
@@ -22,6 +24,7 @@ namespace CoolProductsAPIService.Controllers
         // GET .../api/products
         [HttpGet]
         [EnableQuery]
+        //[Authorize]
         //[EnableCors("_myAllowSpecificOrigins")]
         public IQueryable<Product> GetAllProducts() // Endpoint
         {
@@ -32,6 +35,7 @@ namespace CoolProductsAPIService.Controllers
         // GET .../api/products/123
         [HttpGet]
         [Route("{id:int}")]
+        [AllowAnonymous]
         public async Task<IActionResult> GetProductById(int id)
         {
             var product = await db.Products.FindAsync(id);

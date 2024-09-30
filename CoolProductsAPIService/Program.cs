@@ -1,6 +1,7 @@
 
 using CoolProductsAPIService.Model.Data;
 using Microsoft.AspNet.OData.Extensions;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace CoolProductsAPIService
@@ -39,6 +40,12 @@ namespace CoolProductsAPIService
                 options.UseSqlServer(builder.Configuration.GetConnectionString("default"));
             });
 
+            builder.Services.AddAuthorization();
+
+            builder.Services.AddIdentityApiEndpoints<IdentityUser>()
+            .AddEntityFrameworkStores<ProductsDbContext>();
+
+
             builder.Services.AddControllers().AddNewtonsoftJson();
             builder.Services.AddOData();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -47,6 +54,7 @@ namespace CoolProductsAPIService
 
             var app = builder.Build();
 
+            app.MapIdentityApi<IdentityUser>();
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
