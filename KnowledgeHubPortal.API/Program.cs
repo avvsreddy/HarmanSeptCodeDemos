@@ -1,4 +1,8 @@
 
+using KnowledgeHubPortal.Data;
+using KnowledgeHubPortal.Domain.Repositories;
+using Microsoft.EntityFrameworkCore;
+
 namespace KnowledgeHubPortal.API
 {
     public class Program
@@ -8,6 +12,18 @@ namespace KnowledgeHubPortal.API
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+
+            // Add DbContext
+            builder.Services.AddDbContext<KnowledgeHubPortalDbContext>(options =>
+            {
+                options.UseSqlServer(builder.Configuration.GetConnectionString("default")).UseLazyLoadingProxies();
+            });
+
+
+            //builder.Services.AddTransient<ICategoryRepository, CategoryRepository>();
+            //builder.Services.AddSingleton<ICategoryRepository, CategoryRepository>();
+            builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

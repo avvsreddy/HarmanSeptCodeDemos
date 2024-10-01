@@ -10,6 +10,6 @@
         public string ArticleUrl { get; set; }
         public bool IsApproved { get; set; }
         public int CategoryID { get; set; }
-        public Category Category { get; set; }
+        public virtual Category Category { get; set; }
     }
 }
