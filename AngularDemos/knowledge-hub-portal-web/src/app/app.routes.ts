@@ -10,15 +10,15 @@ export const routes: Routes =
         path:'', component: HomeComponent
     },
     {
-        path:'home', component:HomeComponent
+        path:'home', component:HomeComponent, title:'Knowledge Hub Portal - Home'
     },
     {
-        path:'create-category',component:CreateCategoryComponent
+        path:'create-category',component:CreateCategoryComponent, title:'Knowledge Hub Portal - Create Category'
     },
     {
-        path:'list-category',component:ListCategoryComponent
+        path:'list-category',component:ListCategoryComponent, title:'Knowledge Hub Portal - List Category'
     },
     {
-        path:'**',component:NotfoundComponent
+        path:'**',component:NotfoundComponent, title:'Knowledge Hub Portal - Not Found'
     }
 ];
