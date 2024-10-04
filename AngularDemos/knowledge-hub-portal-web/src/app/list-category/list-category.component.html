@@ -29,16 +29,22 @@ foreach(category in categories)
 }
 </table> 
 -->
+@if(message.length > 1){
+{{message}}
+}
+@else
+{
 <div class="container mt-3">
 <div class="row">
     <div *ngFor="let category of categories" class="col-lg-4 col-md-6 col-sm-12 mb-3">
         <div class="card" style="background-color: #f0f0f0;">
             <div class="card-body">
-                <h5 class="card-title">Category ID: {{category.id}}</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Name: {{category.name}}</h6>
+                <h5 class="card-title">Category ID: {{category.categoryID}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Name: {{category.title}}</h6>
                 <p class="card-text">Description: {{category.description}}</p>
             </div>
         </div>
     </div>
 </div>
 </div>
+}

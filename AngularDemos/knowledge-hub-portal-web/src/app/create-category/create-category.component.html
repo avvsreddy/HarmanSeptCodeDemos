@@ -1,1 +1,57 @@
-<p>create-category works!</p>
+
+<div class="container mt-3" style="max-width: 500px;">
+    <h2 class="mb-3">Create Category</h2>
+
+
+
+    <form >
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input  type="text" class="form-control" name="title" 
+            placeholder="Enter title" >
+           
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea class="form-control" name="description" rows="3" 
+            ></textarea>
+           
+        </div>
+        <button   type="submit" class="btn btn-primary mb-3">Create Category</button>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+<!-- <div class="container mt-3" style="max-width: 500px;">
+    <h2 class="mb-3">Create Category</h2>
+
+{{category.title}} - {{category.description}} 
+
+    <form (ngSubmit)="onFormSubmit()" #categoryForm="ngForm">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input  [class.is-invalid]="title.invalid && title.touched" type="text" class="form-control" name="title" 
+            placeholder="Enter title" [(ngModel)]="category.title" required  #title="ngModel">
+            @if(title.invalid && title.touched){
+            <small class="text-danger">Title is required</small>
+            }
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea class="form-control" name="description" rows="3" 
+            [(ngModel)]="category.description" required #desc="ngModel"></textarea>
+            @if(desc.invalid && desc.touched){
+                <small class="text-danger">Description is required</small>
+                }
+        </div>
+        <button  [disabled]="categoryForm.invalid"  type="submit" class="btn btn-primary mb-3">Create Category</button>
+    </form>
+</div> -->
+
+

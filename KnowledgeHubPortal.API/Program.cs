@@ -13,6 +13,23 @@ namespace KnowledgeHubPortal.API
 
             // Add services to the container.
 
+            var AllowAllOrigins = "_AllowAllOrigins";
+
+
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy(name: AllowAllOrigins,
+                                  builder =>
+                                  {
+                                      //builder.WithOrigins("http://example.com",
+                                      //                    "http://www.contoso.com");
+                                      builder.AllowAnyOrigin();
+                                      builder.AllowAnyMethod();
+                                      builder.AllowAnyHeader();
+                                  });
+            });
+
+
             // Add DbContext
             builder.Services.AddDbContext<KnowledgeHubPortalDbContext>(options =>
             {
@@ -42,7 +59,7 @@ namespace KnowledgeHubPortal.API
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
-
+            app.UseCors(AllowAllOrigins);
 
             app.MapControllers();
 
