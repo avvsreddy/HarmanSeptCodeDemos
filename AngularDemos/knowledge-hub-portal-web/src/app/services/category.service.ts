@@ -31,4 +31,16 @@ postCategory(category:Category){
     return this.http.post(apiUrl,category);
 }
 
+putCategory(category:Category){
+    // let apiUrl:string='https://localhost:44300/api/Categories';
+    // return this.http.put(apiUrl,category);
+    alert('Edit is done');
+}
+
+deleteCategory(categoryId:number){
+     //let apiUrl:string='https://localhost:44300/api/Categories/' + categoryId;
+     //return this.http.delete(apiUrl);
+    alert('Category id deleted...');
+}
+
 }

@@ -1,0 +1,14 @@
+<div class="container" style="max-width: 500px;">
+    <h2>Edit Category</h2>
+    <form (ngSubmit)="submitForm()">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" class="form-control" id="title" [(ngModel)]="category.title" name="title">
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea class="form-control" id="description" [(ngModel)]="category.description" name="description"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary mb-2">Submit</button>
+    </form>
+</div>

@@ -10,7 +10,21 @@ import { Category } from '../models/category';
   templateUrl: './list-category.component.html',
   styleUrl: './list-category.component.css'
 })
-export class ListCategoryComponent implements OnInit {
+export class ListCategoryComponent implements OnInit 
+{
+
+  categoryService:CategoryService = inject(CategoryService);
+deleteCategory(categoryId:number) {
+   this.categoryService.deleteCategory(categoryId);
+}
+//   id:1015,
+//   name:'SQL',
+//   description:'SQL related articles'
+// }
+// ];
+editCategory(categoryToEdit: Category) {
+  window.location.href = `/edit-category?category=${JSON.stringify(categoryToEdit)}`;
+}
 
   categories:Category[]=[];
 
@@ -31,7 +45,7 @@ this.categoryService.getCategories().subscribe({
 
 message:string = '';
 
-categoryService : CategoryService = inject(CategoryService);
+//categoryService : CategoryService = inject(CategoryService);
 
 
 

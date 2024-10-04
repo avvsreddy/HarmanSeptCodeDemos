@@ -3,6 +3,7 @@ import { HomeComponent } from './home/home.component';
 import { CreateCategoryComponent } from './create-category/create-category.component';
 import { ListCategoryComponent } from './list-category/list-category.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { EditCategoryComponent } from './edit-category/edit-category.component';
 
 export const routes: Routes = 
 [
@@ -18,6 +19,10 @@ export const routes: Routes =
     {
         path:'list-category',component:ListCategoryComponent, title:'Knowledge Hub Portal - List Category'
     },
+    {
+        path:'edit-category',component:EditCategoryComponent, title:'Knowledge Hub Portal - Edit Category'
+    },
+    
     {
         path:'**',component:NotfoundComponent, title:'Knowledge Hub Portal - Not Found'
     }
